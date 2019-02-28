@@ -1,0 +1,14 @@
+.form-control:disabled, .form-control[readonly] {
+    background-color: #ffffff;
+    opacity: 1;
+}
+
+.form-control[_ngcontent-c2]:disabled, .form-control[readonly][_ngcontent-c2] {
+    width: 335px;
+    float: right;
+}
+
+.thead-inverse th {
+    color: #e4e5e6;
+    background-color: #29363d;
+}

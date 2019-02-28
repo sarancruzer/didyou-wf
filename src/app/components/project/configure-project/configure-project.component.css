@@ -1,0 +1,13 @@
+.col-auto{
+    width: 250px;
+}
+
+select.form-control-sm
+{    height: 50px !important;    
+}
+
+div.card-header > div > div.pull-right
+{
+    margin-top: 14px;
+    margin-left: 50px;
+}

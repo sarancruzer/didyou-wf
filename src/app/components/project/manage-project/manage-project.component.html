@@ -1,0 +1,161 @@
+
+
+<div class="animated fadeIn">
+    <div class="row">
+        
+      
+     
+      <!--/.col-->
+      <div class="col-lg-12">
+          
+        <div class="card">
+          
+          <div class="card-header">
+
+            <i class="fa fa-align-justify"></i> Project List
+            <div class="pull-right">
+                <a [routerLink]="[ '/addProject']" class="btn btn-sm btn-primary"><i class="fa fa-plus-circle" aria-hidden="true"></i> Create</a>
+              </div>
+          </div>
+          <div class="card-body">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Project Name</th>
+                  <th>Territory</th>
+                  <th>Client </th>
+                  <th>Construction start</th>
+                  <th>Duration</th>
+                  <th>Status</th>
+                  <th>Actions</th>                  
+                  <th>configure</th>                  
+                  <th>Project Data</th>                 
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Project A </td>
+                  <td>Aus</td>
+                  <td>Sai alagar</td>
+                  <td>12-11-2017</td>
+                  <td>120 </td>
+                  <td><span class="badge badge-primary">Configured</span></td>
+                 <td> <a class="btn btn-outline-success" [routerLink]="[ '/editProject']"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                    <button class="btn btn-outline-danger" (click)="deleteUser()"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                  </td>
+                  <td><a class="btn btn-outline-primary" [routerLink]="[ '/configureProject']">Configure</a></td>
+                  <td><button type="button" class="btn btn-success" data-toggle="modal" (click)="createModal.show()">
+                      <i class="fa fa-paper-plane" aria-hidden="true"></i> Project data
+                    </button></td>
+                </tr>
+                 <tr>
+                  <td>2</td>
+                  <td>Project B</td>
+                  <td>Ind</td>
+                  <td>Laks</td>
+                  <td>12-11-2017</td>
+                  <td>120 </td>
+                  <td><span class="badge badge-success">Active</span> </td>
+                 <td> <a class="btn btn-outline-success" [routerLink]="[ '/editProject']"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                    <button class="btn btn-outline-danger" (click)="deleteUser()"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                  </td>
+                  <td><a class="btn btn-outline-primary" [routerLink]="[ '/configureProject']">Configure</a></td>
+                 
+                  <td><button type="button" class="btn btn-success" data-toggle="modal" (click)="createModal.show()">
+                      <i class="fa fa-paper-plane" aria-hidden="true"></i> Project data
+                    </button></td>
+                </tr>
+                 <tr>
+                  <td>3</td>
+                   <td>Project c</td>
+                  <td>US</td>
+                  <td>Ram</td>
+                  <td>12-11-2017</td>
+                  <td>120 </td>
+                  <td><span class="badge badge-warning">InActive</span> </td>
+                 <td> <a class="btn btn-outline-success" [routerLink]="[ '/editProject']"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                    <button class="btn btn-outline-danger" (click)="deleteUser()"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                  </td>
+                  <td><a class="btn btn-outline-primary" [routerLink]="[ '/configureProject']">Configure</a></td>
+                  <td><button type="button" class="btn btn-success" data-toggle="modal" (click)="createModal.show()">
+                      <i class="fa fa-paper-plane" aria-hidden="true"></i> Project data
+                    </button></td>
+                </tr>
+                 <tr>
+                   <td>4</td>
+                  <td>Project D</td>
+                  <td>Canada</td>
+                  <td>Sara</td>
+                  <td>12-11-2017</td>
+                  <td>120 </td>
+                  <td><span class="badge badge-warning">InActive</span> </td>
+                 <td> <a class="btn btn-outline-success" [routerLink]="[ '/editProject']"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                    <button class="btn btn-outline-danger" (click)="deleteUser()"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                  </td>
+                  <td><a class="btn btn-outline-primary" [routerLink]="[ '/configureProject']">Configure</a></td>
+                  <td><button type="button" class="btn btn-success" data-toggle="modal" (click)="createModal.show()">
+                      <i class="fa fa-paper-plane" aria-hidden="true"></i> Project data
+                    </button></td>
+                </tr>
+               
+              </tbody>
+            </table>
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--/.col-->
+    </div>
+    <!--/.row-->
+    
+  </div>
+  
+
+
+<div bsModal #createModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Project Details</h4>
+          <button type="button" class="close" (click)="createModal.hide()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+           <div class="card-body">
+
+              <div class="form-group">                  
+                  <a class="btn btn-outline-secondary btn-lg btn-block" [routerLink]="[ '/projectTeam']">Project Team</a>
+                </div>
+                <div class="form-group">                    
+                    <a class="btn btn-outline-primary btn-lg btn-block" [routerLink]="[ '/projectScope']">Project Scope</a>
+                  </div>
+                  <div class="form-group">                      
+                      <a class="btn btn-outline-success btn-lg btn-block" [routerLink]="[ '/supplyItems']">Supply Items</a>
+                    </div>
+                    <div class="form-group">                      
+                        <a class="btn btn-outline-info btn-lg btn-block" [routerLink]="[ '/manageProjectDocumentation']">Documentation</a>
+                    </div>
+                     <div class="form-group">                      
+                          <a class="btn btn-outline-warning btn-lg btn-block" [routerLink]="[ '/additionalInfo']">Additional Info</a>
+                    </div>
+                    <div class="form-group">                      
+                        <a class="btn btn-outline-danger btn-lg btn-block" [routerLink]="[ '/addProjectNote']">Add Project Note</a>
+                  </div> 
+             
+             </div><!--/.row-->
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
